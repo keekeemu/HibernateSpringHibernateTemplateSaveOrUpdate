@@ -24,7 +24,7 @@ public class Main {
         template.saveOrUpdate(event);
         Event obj = (Event) template.load(Event.class, event.getId());
 
-        HibernateUtil.checkData("select name from events");        
+        HibernateUtil.checkData("select name,u_id from events");        
 
         HibernateFactory.closeFactory();
         
