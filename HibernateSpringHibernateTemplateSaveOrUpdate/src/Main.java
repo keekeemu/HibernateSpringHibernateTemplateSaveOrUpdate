@@ -23,7 +23,9 @@ public class Main {
         event.setName("Spring Hibernate Template test1");
         template.saveOrUpdate(event);
         Event obj = (Event) template.load(Event.class, event.getId());
-
+        
+        // add a cloudBranch on cloud system, while another system has changeDefaults branch
+        System.out.println("on cloud system - create a new branch - cloudBranch");
         System.out.println("+++++++++++ After cloning from github, check in again ++++++++");
         System.out.println("prit out the selection below:");
         HibernateUtil.checkData("select name,u_id from events");        
